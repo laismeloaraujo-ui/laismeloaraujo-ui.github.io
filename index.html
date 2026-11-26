@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laís Melo de Araujo · portfólio UGC</title>
+<meta name="description" content="UGC creator em Goiânia. Vídeos naturais e criativos que mostram seu produto na vida real.">
+<!-- Prévia do link no WhatsApp (endereço do GitHub Pages) -->
+<meta property="og:title" content="Laís Melo de Araujo · UGC creator">
+<meta property="og:description" content="Crio vídeos naturais e criativos que mostram como seu produto funciona na vida real e fazem as pessoas quererem conhecer sua marca.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laismeloaraujo-ui.github.io/">
+<meta property="og:image" content="https://laismeloaraujo-ui.github.io/midia/capa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#A9C7E8; --azul-claro:#DCE8F5; --manteiga:#F5E6A8; --vinho:#702D3D;
+  --off:#F8F5EF; --papel:#FFFDF8; --marinho:#1F2F48; --linha:#DCE6F2;
+  --serif:"Playfair Display",Georgia,serif; --mao:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--marinho);background:var(--off);overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--vinho);line-height:1.08}
+h2{font-size:clamp(30px,4vw,44px)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.mao{font-family:var(--mao);font-style:italic;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;border:1.5px solid var(--vinho);font:700 14px var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-azul{background:var(--azul);color:var(--vinho)}
+.btn-branco{background:#fff;color:var(--vinho)}
+.btn-vinho{background:var(--vinho);color:var(--off);border-color:var(--vinho)}
+.quadriculado{background-color:var(--papel);background-image:linear-gradient(var(--linha) 1px,transparent 1px),linear-gradient(90deg,var(--linha) 1px,transparent 1px);background-size:26px 26px}
+
+/* lacunas listradas */
+.lacuna{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;color:var(--vinho);
+  background:repeating-linear-gradient(-45deg,var(--manteiga) 0 12px,var(--off) 12px 24px);border:1.5px dashed var(--vinho);font-size:13px;line-height:1.4;width:100%;height:100%}
+.lacuna svg{width:30px;height:30px}
+.lacuna b{font-weight:700}
+
+/* MENU */
+.menu{position:sticky;top:0;z-index:50;background:var(--azul)}
+.menu{border-bottom:1.5px solid var(--vinho)}
+.menu .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:64px}
+.menu nav{display:flex;gap:22px}
+.menu nav:last-of-type{justify-content:flex-end}
+.menu nav a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vinho);text-decoration:none}
+.menu nav a:hover{text-decoration:underline}
+.logo{font-family:var(--serif);font-size:24px;color:var(--vinho);text-decoration:none;display:flex;align-items:center;gap:6px}
+.logo i{font-style:normal;color:var(--vinho);font-family:var(--sans);font-size:20px}
+.menu-btn{display:none;background:none;border:1.5px solid var(--vinho);border-radius:999px;padding:6px 14px;font:700 12px var(--sans);letter-spacing:.12em;color:var(--vinho);text-transform:uppercase;cursor:pointer;justify-self:end}
+.menu-mob{display:none}
+
+/* CAPA */
+.capa{padding:70px 0 90px;position:relative;overflow:hidden}
+.capa .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.capa .tag{color:var(--vinho);margin-bottom:16px}
+.capa h1{font-size:clamp(46px,6.2vw,82px);letter-spacing:-.01em}
+.capa .nichos-linha{font-family:var(--mao);font-style:italic;font-size:26px;color:var(--vinho);margin:12px 0 14px}
+.capa .frase{max-width:500px;font-size:16px}
+.provas{display:flex;gap:14px;margin:26px 0 28px;flex-wrap:wrap}
+.selo{position:relative;width:112px;height:112px;display:grid;place-items:center;text-align:center}
+.selo svg{position:absolute;inset:0;width:100%;height:100%}
+.selo div{position:relative;line-height:1.1;padding:0 12px}
+.selo b{display:block;font-family:var(--serif);font-size:28px;font-weight:600}
+.selo span{font-size:12px;font-weight:700;letter-spacing:.02em}
+.botoes{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.seta{width:120px;height:60px;color:var(--vinho);margin-left:6px}
+.capa-foto{position:relative;justify-self:center;padding:30px 0 10px 40px}
+.polaroid{position:relative;background:#fff;padding:12px 12px 46px;box-shadow:0 10px 30px rgba(31,47,72,.18);transform:rotate(var(--rot,2deg))}
+.polaroid .legenda{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--mao);font-style:italic;font-weight:600;font-size:20px;color:var(--vinho)}
+.fita{position:absolute;width:110px;height:30px;top:-14px;opacity:.8;z-index:2}
+.fita.v{background:rgba(112,45,61,.65);left:-26px;transform:rotate(-28deg)}
+.fita.a{background:rgba(169,199,232,.85);right:-26px;transform:rotate(24deg)}
+.fita.m{background:rgba(245,230,168,.9);left:50%;margin-left:-55px;transform:rotate(-4deg)}
+.capa-foto .polaroid{width:min(380px,80vw);--rot:3deg}
+.capa-foto .foto{aspect-ratio:3/4;width:100%;object-fit:cover}
+.bilhete{position:absolute;right:-24px;bottom:70px;background:var(--manteiga);padding:12px 16px;font-family:var(--mao);font-style:italic;font-weight:600;font-size:22px;color:var(--vinho);transform:rotate(-6deg);box-shadow:0 6px 14px rgba(31,47,72,.15);z-index:3}
+.etiqueta{position:absolute;left:10px;bottom:-14px;background:var(--off);border:1.5px solid var(--vinho);padding:8px 14px;font-size:13px;color:var(--vinho);transform:rotate(-3deg);z-index:3}
+.etiqueta b{font-family:var(--serif);font-weight:600}
+.selo-brilho{position:absolute;left:-50px;top:40px;width:150px;height:150px;z-index:4}
+.selo-brilho .gira{width:100%;height:100%;animation:gira 30s linear infinite}
+.selo-brilho .cereja{position:absolute;inset:0;display:grid;place-items:center;font-size:34px}
+@keyframes gira{to{transform:rotate(360deg)}}
+.adesivo{position:absolute;color:var(--vinho);animation:balanca 4s ease-in-out infinite;transform-origin:50% 0}
+.adesivo svg{width:100%;height:100%}
+@keyframes balanca{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+
+/* FAIXA DE MARCAS */
+.faixa{background:var(--papel);border-top:1.5px solid var(--vinho);border-bottom:1.5px solid var(--vinho);overflow:hidden;padding:18px 0}
+.faixa-trilho{display:flex;gap:44px;width:max-content;animation:rola 60s linear infinite;align-items:center}
+.faixa:hover .faixa-trilho{animation-play-state:paused}
+.faixa img{height:54px;width:auto;max-width:130px;object-fit:contain;border-radius:6px}
+.faixa span{font-family:var(--serif);font-size:20px;color:var(--vinho);white-space:nowrap}
+@keyframes rola{to{transform:translateX(-50%)}}
+
+/* SOBRE */
+.sobre{background:var(--vinho);padding:80px 0}
+.folha{position:relative;background:var(--papel);border-radius:6px;padding:64px 48px 48px;
+  background-image:repeating-linear-gradient(transparent 0 31px,var(--linha) 31px 32px);box-shadow:0 14px 40px rgba(0,0,0,.2)}
+.folha::before{content:"";position:absolute;left:24px;right:24px;top:18px;height:18px;background:radial-gradient(circle,var(--furo,var(--vinho)) 7px,transparent 8px) 0 0/44px 18px repeat-x}
+.sobre-grid{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.sobre .polaroid{--rot:-3deg}
+.sobre .polaroid .foto,.sobre .polaroid .lacuna{aspect-ratio:4/5;width:100%;object-fit:cover}
+.sobre h2{margin-bottom:16px}
+.sobre p.texto{max-width:620px;margin-bottom:26px}
+.tabela3{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--vinho);margin-bottom:24px}
+.tabela3 div{padding:18px;border-right:1.5px solid var(--vinho);font-size:15px}
+.tabela3 div:last-child{border-right:0}
+.tabela3 div:first-child{background:var(--vinho);color:var(--off)}
+.tabela3 b{display:block;font-family:var(--serif);font-size:30px;font-weight:500;margin-bottom:6px}
+.pilula{display:inline-block;background:var(--manteiga);color:var(--vinho);border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700}
+
+/* DESTAQUES */
+.destaques{display:grid;grid-template-columns:.8fr 1.2fr;min-height:640px}
+.dest-texto{background:var(--off);padding:80px 48px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.dest-texto .tag{color:var(--vinho)}
+.dest-texto p{max-width:380px}
+.dest-listras{background:repeating-linear-gradient(90deg,var(--azul) 0 42px,var(--manteiga) 42px 84px);padding:70px 30px;display:flex;align-items:center;justify-content:center}
+.dest-trilho{display:flex;gap:26px;align-items:center;justify-content:center}
+.dest-item{flex:0 0 210px;position:relative}
+.dest-item.forte{flex-basis:260px;order:2}
+.dest-item.d2{order:1;--rot:-4deg}
+.dest-item.d3{order:3;--rot:4deg}
+.dest-item.forte .polaroid{--rot:-1deg}
+.selo-res{position:absolute;top:-30px;right:-24px;width:96px;height:96px;z-index:5;color:var(--off)}
+.info{font-size:13px;color:var(--marinho);text-align:center;margin-top:6px}
+.info b{color:var(--vinho)}
+
+/* VÍDEO */
+.vid{position:relative;aspect-ratio:9/16;width:100%;background:var(--azul-claro);cursor:pointer;overflow:hidden}
+.vid video{width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;background:rgba(248,245,239,.92);color:var(--vinho);display:grid;place-items:center;font-size:14px;pointer-events:none}
+
+/* XADREZ */
+.xadrez{height:40px;background:conic-gradient(var(--vinho) 25%,var(--azul) 0 50%,var(--vinho) 0 75%,var(--azul) 0) 0 0/40px 40px}
+
+/* NICHOS */
+.nichos{background:var(--azul);padding:80px 0}
+.nichos .topo{text-align:center;margin-bottom:34px}
+.nichos .topo .tag{background:var(--manteiga);color:var(--vinho);padding:8px 16px;border-radius:999px;margin-bottom:14px}
+.atalhos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.atalhos a{border:1.5px solid var(--vinho);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:500;color:var(--vinho);text-decoration:none;background:var(--off)}
+.atalhos a:hover{background:var(--manteiga)}
+.pagina{margin-top:44px;border:1.5px solid var(--vinho);box-shadow:0 8px 16px rgba(31,47,72,.18)}
+.pagina-in{background:var(--off);padding:30px 32px 26px}
+.pag-topo{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.pag-topo .tag{color:var(--vinho);border:1.5px solid var(--vinho);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.pag-topo h3{font-size:clamp(32px,4vw,44px);text-transform:capitalize}
+.pag-topo .qtd{font-size:22px;color:var(--vinho);margin-top:2px}
+.setas{display:flex;gap:10px}
+.setas button{width:46px;height:46px;border-radius:50%;border:0;background:var(--vinho);color:var(--off);font-size:20px;cursor:pointer}
+.setas button:disabled{opacity:.35;cursor:default}
+.aviso{margin-top:12px;font-size:13px;color:var(--vinho);background:var(--manteiga);display:inline-block;padding:6px 12px;border-radius:6px}
+.trilho{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 6px 10px;scrollbar-width:none;cursor:grab}
+.trilho::-webkit-scrollbar{display:none}
+.trilho.arrastando{scroll-snap-type:none;cursor:grabbing}
+.trilho .item{flex:0 0 calc((100% - 66px)/4);scroll-snap-align:start}
+.trilho .polaroid{padding:10px 10px 40px}
+.trilho .item:nth-child(odd) .polaroid{--rot:-2deg}
+.trilho .item:nth-child(even) .polaroid{--rot:2deg}
+.trilho .fita{width:80px;height:24px}
+.trilho .lacuna{aspect-ratio:9/16}
+
+/* MARCAS FALAM */
+.falam{padding:80px 0}
+.falam .topo{text-align:center;margin-bottom:40px}
+.falam .topo .tag{color:var(--vinho)}
+.bilhetes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.nota{position:relative;padding:40px 26px 26px;min-height:220px;box-shadow:0 10px 20px rgba(31,47,72,.14);transform:rotate(var(--rot))}
+.nota:nth-child(1){background:var(--manteiga);--rot:-2deg}
+.nota:nth-child(2){background:var(--azul-claro);--rot:1.5deg}
+.nota:nth-child(3){background:#fff;--rot:-1deg}
+.nota .fita{top:-12px}
+.nota q{display:block;font-family:var(--serif);font-size:20px;color:var(--vinho);quotes:"“" "”"}
+.nota .quem{margin-top:14px;font-size:22px;color:var(--vinho)}
+.nota .ctx{font-size:13px}
+.nota .lacuna{min-height:150px}
+.lista-marcas{margin-top:50px;text-align:center}
+.lista-marcas p{max-width:900px;margin:12px auto 0;font-size:15px;line-height:1.9}
+
+/* CONTATO */
+.contato{background:repeating-linear-gradient(90deg,var(--azul) 0 42px,var(--off) 42px 84px);padding:80px 0}
+.contato .folha{--furo:var(--azul);max-width:880px;margin:0 auto;text-align:center}
+.contato .chamado{font-size:24px;color:var(--vinho);margin:6px 0 14px}
+.contato .botoes{justify-content:center;margin:22px 0}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:620px;margin:10px auto 26px;text-align:left}
+.form label{font-size:13px;font-weight:700;color:var(--vinho);display:flex;flex-direction:column;gap:4px}
+.form input{font:15px var(--sans);padding:11px 12px;border:1.5px solid var(--vinho);border-radius:8px;background:#fff;color:var(--marinho)}
+.form .cheio{grid-column:1/-1}
+.form .ok{grid-column:1/-1;text-align:center;font-family:var(--serif);font-size:24px;color:var(--vinho)}
+.duvidas{display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--vinho);text-align:left;margin-top:30px}
+.duvidas div{padding:18px;border-bottom:1.5px solid var(--vinho)}
+.duvidas div:nth-child(odd){border-right:1.5px solid var(--vinho)}
+.duvidas div:nth-last-child(-n+2){border-bottom:0}
+.duvidas b{display:block;font-family:var(--serif);font-weight:500;color:var(--vinho);font-size:18px;margin-bottom:6px}
+.duvidas .vazio{font-size:13px;color:var(--vinho);background:repeating-linear-gradient(-45deg,var(--manteiga) 0 8px,var(--off) 8px 16px);padding:6px 8px;display:inline-block}
+.rodape{position:relative;background:var(--vinho);color:var(--off);text-align:center;padding:44px 24px 96px;margin-top:12px}
+.rodape .nome{font-family:var(--serif);font-size:26px}
+.rodape .mao{font-size:22px;color:var(--manteiga);margin-top:8px}
+.rodape small{display:block;font-size:13px;margin-top:4px;letter-spacing:.06em}
+
+/* ZAP FIXO */
+.zap{position:fixed;right:16px;bottom:16px;z-index:60;width:52px;height:52px;border-radius:50%;background:var(--vinho);color:var(--off);display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.zap svg{width:26px;height:26px}
+
+/* PLAYER */
+.player{position:fixed;inset:0;z-index:100;background:rgba(31,47,72,.86);display:none;align-items:center;justify-content:center;padding:20px}
+.player.aberto{display:flex}
+.player video{max-height:88vh;max-width:min(92vw,500px);aspect-ratio:9/16;background:#000;border-radius:8px}
+.player button{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;border:0;background:var(--off);color:var(--vinho);font-size:22px;cursor:pointer}
+
+/* TABLET */
+@media (max-width:900px){
+  .capa .wrap,.sobre-grid,.destaques{grid-template-columns:1fr}
+  .capa-foto{padding-left:0;margin-top:30px}
+  .selo-brilho{left:-30px;width:120px;height:120px}
+  .dest-texto{padding:60px 24px 30px}
+  .destaques>*{min-width:0}
+  .dest-listras{padding:40px 0;display:block}
+  .dest-trilho{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 24px 20px;gap:22px;scrollbar-width:none}
+  .dest-item,.dest-item.forte{flex:0 0 260px;scroll-snap-align:center;order:0}
+  .trilho .item{flex-basis:calc((100% - 22px)/2)}
+  .bilhetes{grid-template-columns:1fr}
+  .menu nav{display:none}
+  .menu .wrap{grid-template-columns:1fr auto}
+  .menu-btn{display:block}
+  .menu-mob.aberto{display:flex;flex-direction:column;gap:14px;padding:16px 24px 24px;background:var(--azul)}
+  .menu-mob a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vinho);text-decoration:none}
+  .sobre .polaroid{max-width:300px}
+  .adesivo{display:none}
+}
+/* CELULAR */
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  .capa{padding:40px 0 70px}
+  .capa .nichos-linha{font-size:22px}
+  .provas{gap:8px}
+  .selo{width:106px;height:106px}
+  .selo div{padding:0 6px}
+  .selo b{font-size:24px}
+  .seta{display:none}
+  .bilhete{right:-6px;font-size:19px}
+  .selo-brilho{left:0;top:-4px;width:96px;height:96px}
+  .selo-brilho .cereja{font-size:24px}
+  .folha{padding:56px 18px 28px}
+  .tabela3{grid-template-columns:1fr}
+  .tabela3 div{border-right:0;border-bottom:1.5px solid var(--vinho)}
+  .tabela3 div:last-child{border-bottom:0}
+  .dest-trilho{padding:30px 16px 20px;gap:18px}
+  .dest-item,.dest-item.forte{flex:0 0 72%}
+  .pagina-in{padding:24px 16px 20px}
+  .trilho .item{flex-basis:78%}
+  .form{grid-template-columns:1fr}
+  .duvidas{grid-template-columns:1fr}
+  .duvidas div{border-right:0!important;border-bottom:1.5px solid var(--vinho)!important}
+  .duvidas div:last-child{border-bottom:0!important}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .faixa-trilho{flex-wrap:wrap;width:auto;justify-content:center;padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="menu" id="topo">
+  <div class="wrap">
+    <nav><a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a></nav>
+    <a class="logo" href="#topo" id="logo"></a>
+    <nav><a href="#falam">O que as marcas falam</a><a href="#contato">Contato</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+  </div>
+  <div class="menu-mob" id="menuMob">
+    <a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a><a href="#falam">O que as marcas falam</a><a href="#contato">Contato</a>
+  </div>
+</header>
+
+<main>
+  <section class="capa quadriculado" id="capa"></section>
+  <section class="sobre" id="sobre"></section>
+  <div class="faixa" aria-label="Marcas atendidas"><div class="faixa-trilho" id="faixa"></div></div>
+  <section class="destaques" id="destaques"></section>
+  <div class="xadrez" aria-hidden="true"></div>
+  <section class="nichos" id="nichos"></section>
+  <section class="falam quadriculado" id="falam"></section>
+  <section class="contato" id="contato"></section>
+</main>
+<footer class="rodape" id="rodape"></footer>
+
+<a class="zap" id="zap" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
+</a>
+
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="Vídeo">
+  <button id="fechar" aria-label="Fechar">✕</button>
+  <video id="playerVideo" controls playsinline></video>
+</div>
+
+<script>
+/* ====== FUNÇÕES QUE MONTAM A PÁGINA (não precisa mexer aqui) ====== */
+function montar(D){
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(t){return String(t||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+  var slug = function(t){return String(t).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,50)};
+  var primeiro = D.nome.split(" ")[0];
+  var msg = "Oi, "+primeiro+"! Vi seu portfólio e quero conversar sobre vídeos pra minha marca.";
+  var linkZap = D.whatsapp ? "https://wa.me/"+D.whatsapp.replace(/\D/g,"")+"?text="+encodeURIComponent(msg)
+                           : "mailto:"+D.email+"?subject="+encodeURIComponent("Vídeos UGC pra minha marca")+"&body="+encodeURIComponent(msg);
+  var ICONE = {
+    foto:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l2-3h4l2 3"/></svg>',
+    video:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>',
+    texto:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16M4 10h16M4 15h10"/></svg>'
+  };
+  var lacuna = function(tipo,dica){return '<div class="lacuna">'+ICONE[tipo]+'<span>'+dica+'</span></div>'};
+  var onda = function(cor,n,amp){ // forma de flor/carimbo em SVG
+    var p=[],R=46-amp;for(var i=0;i<=180;i++){var a=i/180*Math.PI*2,r=R+amp*Math.sin(n*a);p.push((50+r*Math.cos(a)).toFixed(2)+","+(50+r*Math.sin(a)).toFixed(2))}
+    return '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M'+p.join("L")+'Z" fill="'+cor+'"/></svg>';
+  };
+  var video = function(v,primeiroAuto){
+    if(!v || !v.video) return lacuna("video","Coloque o .mp4 aqui (vertical 9:16, até 15 MB)");
+    return '<div class="vid" data-src="'+esc(v.video)+'" data-titulo="'+esc(v.titulo)+'">'+
+      '<video '+(primeiroAuto?'data-auto autoplay ':'')+'muted loop playsinline preload="metadata" src="'+esc(v.video)+'#t=0.1"'+(v.capa?' poster="'+esc(v.capa)+'"':'')+'></video>'+
+      '<span class="play" aria-hidden="true">▶</span></div>';
+  };
+
+  document.title = D.nome+" · portfólio UGC";
+  $("logo").innerHTML = esc(D.nome.split(" ").slice(0,2).join(" "))+' <i>✳</i>';
+  $("zap").href = linkZap;
+
+  /* CAPA */
+  var cores=[["#F5E6A8","#702D3D"],["#702D3D","#F8F5EF"],["#A9C7E8","#702D3D"]];
+  $("capa").innerHTML =
+   '<div class="wrap"><div>'+
+     '<span class="tag">(UGC creator · Goiânia/GO)</span>'+
+     '<h1>'+esc(D.nome)+'</h1>'+
+     '<p class="nichos-linha">UGC creator de '+esc(D.nichosResumo)+'</p>'+
+     '<p class="frase">'+esc(D.frase)+'</p>'+
+     '<div class="provas">'+D.provas.map(function(p,i){return '<div class="selo" style="color:'+cores[i%3][1]+'">'+onda(cores[i%3][0],12,4)+'<div><b>'+esc(p.numero)+'</b><span>'+esc(p.texto)+'</span></div></div>'}).join("")+'</div>'+
+     '<div class="botoes"><a class="btn btn-azul" href="#destaques">Ver meus melhores vídeos</a><a class="btn btn-branco" href="#contato">Falar comigo</a>'+
+     '<svg class="seta" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 44c22 12 58 12 84-12"/><path d="M78 26l13 5-4 13"/></svg></div>'+
+   '</div>'+
+   '<div class="capa-foto">'+
+     '<div class="polaroid"><span class="fita v"></span><span class="fita a"></span>'+
+       (D.fotoCapa?'<img class="foto" src="'+esc(D.fotoCapa)+'" alt="Foto de '+esc(D.nome)+'">':'<div class="foto">'+lacuna("foto","<b>Foto de capa</b><br>Retrato com rosto, luz natural e ambiente real. Sem selfie: a capa mostra o seu nível")+'</div>')+
+     '</div>'+
+     '<div class="bilhete">me chama pra brilhar ✦</div>'+
+     '<div class="etiqueta">Vídeos feitos por: <b>'+esc(D.nome.split(" ").slice(0,2).join(" "))+'</b></div>'+
+     '<span class="adesivo" style="right:-40px;top:0;width:46px;height:46px">'+asterisco("#702D3D")+'</span>'+
+     '<span class="adesivo" style="right:-10px;top:52%;width:30px;height:30px;animation-delay:-1.5s">'+asterisco("#A9C7E8")+'</span>'+
+     '<span class="adesivo" style="left:-6px;bottom:30px;width:34px;height:34px;animation-delay:-2.5s">'+asterisco("#E3C95E")+'</span>'+
+   '</div></div>';
+
+  /* SOBRE */
+  $("sobre").innerHTML =
+   '<div class="wrap"><div class="folha"><div class="sobre-grid">'+
+     '<div class="polaroid"><span class="fita m"></span>'+(D.fotoSobre?'<img class="foto" src="'+esc(D.fotoSobre)+'" alt="'+esc(primeiro)+' no dia a dia">':lacuna("foto","<b>Foto no dia a dia</b><br>Você na sua rotina real, sem pose de estúdio"))+'<span class="legenda">eu, na vida real</span></div>'+
+     '<div><span class="tag" style="color:var(--vinho)">Sobre mim</span><h2>Prazer, '+esc(primeiro)+'!</h2>'+
+       '<p class="texto">'+esc(D.sobreTexto)+'</p>'+
+       '<div class="tabela3">'+D.diferenciais.map(function(d,i){return '<div><b>0'+(i+1)+'</b>'+esc(d)+'</div>'}).join("")+'</div>'+
+       '<span class="pilula">Formada no Método Profissão do Futuro · aluna da Rafa Chagas</span>'+
+     '</div></div></div></div>';
+
+  /* FAIXA DE MARCAS */
+  var itens = D.marcas.map(function(m){return m.logo?'<img src="'+esc(m.logo)+'" alt="'+esc(m.nome)+'" loading="lazy">':'<span>'+esc(m.nome)+'</span>'}).join("");
+  $("faixa").innerHTML = itens+itens.replace(/alt="/g,'aria-hidden="true" alt="');
+
+  /* DESTAQUES */
+  var dest = [0,1,2].map(function(i){
+    var d=D.destaques[i]||{};
+    return '<div class="dest-item '+(i===0?'forte':'d'+(i+1))+'">'+
+      (i===0&&d.res?'<div class="selo-res">'+onda("#702D3D",12,4)+'<div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:700 13px/1.15 var(--sans);padding:14px">'+esc(d.res)+'</div></div>':'')+
+      '<div class="polaroid"><span class="fita '+(i===1?'a':'v')+'"></span>'+video(d,i===0)+'<span class="legenda">'+esc(d.titulo||"vídeo "+(i+1))+'</span></div>'+
+      '<p class="info"><b>'+esc(d.nicho||"nicho")+'</b> · '+esc(d.formato||"formato")+'</p></div>';
+  }).join("");
+  $("destaques").innerHTML =
+   '<div class="dest-texto"><span class="tag">Destaques</span><h2>Meus melhores vídeos</h2>'+
+   '<p>Três trabalhos que mostram como eu conto a história do produto, do gancho à vontade de comprar.</p>'+
+   '<a class="btn btn-vinho" href="#nichos" style="align-self:flex-start">Ver conteúdo por nichos</a></div>'+
+   '<div class="dest-listras"><div class="dest-trilho">'+dest+'</div></div>';
+
+  /* NICHOS */
+  $("nichos").innerHTML = '<div class="wrap"><div class="topo"><span class="tag">Conteúdo por nichos</span><h2>Ache o vídeo do seu nicho</h2>'+
+    '<div class="atalhos">'+D.nichos.map(function(n){return '<a href="#nicho-'+slug(n.nome)+'">'+esc(n.nome)+'</a>'}).join("")+'</div></div>'+
+    D.nichos.map(function(n,i){
+      var vs=n.videos||[];
+      var cards = vs.map(function(v){return '<div class="item"><div class="polaroid"><span class="fita '+(Math.random()>.5?'v':'a')+'"></span>'+video(v)+'<span class="legenda">'+esc(v.titulo)+'</span></div></div>'}).join("");
+      if(vs.length<3){for(var k=vs.length;k<Math.max(3,vs.length);k++)cards+='<div class="item"><div class="polaroid">'+lacuna("video","Coloque um vídeo de "+esc(n.nome)+" (.mp4 vertical)")+'</div></div>'}
+      return '<div class="pagina" id="nicho-'+slug(n.nome)+'"><div class="pagina-in"><div class="pag-topo"><div>'+
+        '<span class="tag">página '+String(i+1).padStart(2,"0")+'</span><h3>'+esc(n.nome)+'</h3>'+
+        '<p class="qtd mao">'+(vs.length?vs.length+(vs.length>1?" vídeos":" vídeo"):"nenhum vídeo ainda")+'</p>'+
+        (vs.length<3?'<p class="aviso">mínimo 3 vídeos: com menos, tire o nicho</p>':'')+
+        '</div><div class="setas"><button aria-label="Vídeos anteriores" data-dir="-1">←</button><button aria-label="Próximos vídeos" data-dir="1">→</button></div></div>'+
+        '<div class="trilho">'+cards+'</div></div></div>';
+    }).join("")+'</div>';
+
+  /* O QUE AS MARCAS FALAM */
+  var fitas=["v","a","m"];
+  $("falam").innerHTML = '<div class="wrap"><div class="topo"><span class="tag">O que as marcas falam</span><h2>Recados de quem já gravou comigo</h2></div>'+
+    '<div class="bilhetes">'+[0,1,2].map(function(i){var e=D.elogios[i]||{};
+      return '<div class="nota"><span class="fita '+fitas[i]+'"></span>'+(e.texto?'<q>'+esc(e.texto)+'</q><p class="quem mao">'+esc(e.marca)+'</p><p class="ctx">'+esc(e.detalhe)+'</p>':lacuna("texto","Cole aqui a frase ou o print real da marca"))+'</div>'}).join("")+'</div>'+
+    '<div class="lista-marcas"><span class="tag" style="color:var(--vinho)">Marcas que já atendi</span><p>'+D.marcas.map(function(m){return esc(m.nome)}).join(" · ")+'</p></div></div>';
+
+  /* CONTATO */
+  var form = D.formspree ? '<form class="form" id="form"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">'+
+      '<label>Seu nome<input name="nome" required></label><label>Empresa<input name="empresa" required></label>'+
+      '<label>Produto<input name="produto" required></label><label>Prazo<input name="prazo" required placeholder="ex.: até dia 20"></label>'+
+      '<label class="cheio">WhatsApp<input name="whatsapp" required inputmode="tel"></label>'+
+      '<button class="btn btn-vinho cheio" style="justify-content:center">Pedir orçamento</button></form>' : '';
+  $("contato").innerHTML = '<div class="wrap"><div class="folha">'+
+    '<span class="tag" style="color:var(--vinho)">Contato</span><h2>Seu produto merece um vídeo que brilha ✦</h2>'+
+    '<p class="chamado mao">bora trabalhar juntas?</p>'+
+    '<div class="botoes"><a class="btn btn-vinho" href="'+linkZap+'" target="_blank" rel="noopener">'+(D.whatsapp?"Chamar no WhatsApp":"Mandar e-mail")+'</a>'+
+    '<a class="btn btn-branco" href="https://instagram.com/'+esc(D.instagram)+'" target="_blank" rel="noopener">Instagram @'+esc(D.instagram)+'</a></div>'+
+    form+
+    '<div class="duvidas">'+D.duvidas.map(function(d){return '<div><b>'+esc(d.pergunta)+'</b>'+(d.resposta?esc(d.resposta):'<span class="vazio">escreva aqui a sua resposta</span>')+'</div>'}).join("")+'</div>'+
+    '</div></div>';
+  $("rodape").innerHTML = '<p class="nome">'+esc(D.nome)+'</p><small>UGC creator · aluna da Rafa Chagas</small><p class="mao">A vida em movimento ✳</p>';
+
+  /* FORMULÁRIO (Formspree) */
+  var f=$("form");
+  if(f) f.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    fetch(D.formspree,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}})
+      .then(function(r){if(!r.ok)throw 0;f.innerHTML='<p class="ok">Recebi! Te chamo em breve.</p>'})
+      .catch(function(){f.innerHTML='<p class="ok" style="font-size:18px">Não consegui enviar agora.</p><a class="btn btn-vinho cheio" style="justify-content:center" href="'+linkZap+'" target="_blank" rel="noopener">Falar no WhatsApp</a>'});
+  });
+
+  /* MÉTRICAS (Umami) */
+  if(D.umami){var s=document.createElement("script");s.src="https://cloud.umami.is/script.js";s.setAttribute("data-website-id",D.umami);s.defer=true;document.head.appendChild(s)}
+
+  /* VÍDEOS: passar o mouse, tocar, player grande */
+  var calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var mouse = matchMedia("(hover: hover)").matches;
+  var player=$("player"), pv=$("playerVideo");
+  function abrir(src,titulo){
+    pv.src=src; player.classList.add("aberto"); pv.muted=false; pv.play().catch(function(){});
+    if(window.umami && typeof window.umami.track==="function"){try{window.umami.track("video-"+slug(titulo))}catch(e){}}
+  }
+  function fechar(){player.classList.remove("aberto");pv.pause();pv.removeAttribute("src");pv.load()}
+  $("fechar").onclick=fechar;
+  player.addEventListener("click",function(e){if(e.target===player)fechar()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&player.classList.contains("aberto"))fechar()});
+  document.querySelectorAll(".vid").forEach(function(el){
+    var v=el.querySelector("video");
+    el.addEventListener("click",function(){if(el.dataset.arrastou)return;abrir(el.dataset.src,el.dataset.titulo)});
+    if(mouse && !v.hasAttribute("data-auto")){
+      el.addEventListener("mouseenter",function(){v.play().catch(function(){})});
+      el.addEventListener("mouseleave",function(){v.pause()});
+    }
+  });
+  var auto=document.querySelector("video[data-auto]");
+  if(auto && calmo){auto.removeAttribute("autoplay");auto.pause()}
+  if(auto && !calmo && "IntersectionObserver" in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)auto.play().catch(function(){});else auto.pause()})},{threshold:.4}).observe(auto);
+  }
+
+  /* CARROSSEL DOS NICHOS: setas e arrastar */
+  document.querySelectorAll(".pagina").forEach(function(p){
+    var t=p.querySelector(".trilho"), bs=p.querySelectorAll(".setas button");
+    function estado(){bs[0].disabled=t.scrollLeft<5;bs[1].disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-5}
+    bs.forEach(function(b){b.onclick=function(){t.scrollBy({left:t.clientWidth*b.dataset.dir,behavior:calmo?"auto":"smooth"})}});
+    t.addEventListener("scroll",estado,{passive:true}); estado();
+    var x0=0,s0=0,ativo=false,moveu=false;
+    t.addEventListener("pointerdown",function(e){if(e.pointerType!=="mouse")return;ativo=true;moveu=false;x0=e.clientX;s0=t.scrollLeft});
+    window.addEventListener("pointermove",function(e){if(!ativo)return;var dx=e.clientX-x0;if(Math.abs(dx)>5){moveu=true;t.classList.add("arrastando")}t.scrollLeft=s0-dx});
+    window.addEventListener("pointerup",function(){if(!ativo)return;ativo=false;t.classList.remove("arrastando");
+      if(moveu){t.querySelectorAll(".vid").forEach(function(v){v.dataset.arrastou=1});setTimeout(function(){t.querySelectorAll(".vid").forEach(function(v){delete v.dataset.arrastou})},50)}});
+  });
+
+  /* MENU DO CELULAR */
+  var mb=$("menuBtn"), mm=$("menuMob");
+  mb.onclick=function(){var a=mm.classList.toggle("aberto");mb.setAttribute("aria-expanded",a)};
+  mm.querySelectorAll("a").forEach(function(a){a.onclick=function(){mm.classList.remove("aberto");mb.setAttribute("aria-expanded",false)}});
+
+  /* LINK COM ?c=nicho abre direto na página do nicho */
+  var c=new URLSearchParams(location.search).get("c");
+  if(c){var alvo=document.getElementById("nicho-"+slug(c));
+    if(alvo){var ir=function(){var y=alvo.getBoundingClientRect().top+scrollY-80;window.scrollTo({top:y,behavior:"instant"})};
+      ir(); setTimeout(ir,400); window.addEventListener("load",ir)}}
+}
+function asterisco(cor){return '<svg viewBox="0 0 40 40" aria-hidden="true"><g stroke="'+cor+'" stroke-width="5" stroke-linecap="round"><path d="M20 4v32M4 20h32M8.7 8.7l22.6 22.6M31.3 8.7L8.7 31.3"/></g></svg>'}
+</script>
+
+<script>
+/* =====================================================================
+   DADOS — é só mexer aqui pra trocar tudo no portfólio.
+   Textos entre aspas. Campo vazio ("") mostra o espaço listrado com dica.
+   ===================================================================== */
+var DADOS = {
+  nome: "Laís Melo de Araujo",           // seu nome (as 2 primeiras palavras viram o logo do menu)
+  instagram: "laismeloaraujo",           // só o @, sem o símbolo
+  whatsapp: "5562999646818",             // com 55 + DDD. Se apagar, o botão vira e-mail
+  email: "laismeloaraujo@gmail.com",     // seu e-mail
+  site: "https://laismeloaraujo-ui.github.io/", // link do site (se mudar, troque também as tags og: lá no topo do arquivo)
+  formspree: "",                         // endereço do formulário no Formspree (ex.: https://formspree.io/f/abcd1234). Vazio = sem formulário
+  umami: "",                             // ID do site no Umami (pra contar acessos). Vazio = sem métricas
+  nichosResumo: "tech, maternidade, suplementos, fitness e beleza", // aparece na capa: "UGC creator de ..."
+  frase: "Crio vídeos naturais e criativos que mostram como seu produto funciona na vida real e fazem as pessoas quererem conhecer sua marca.",
+  provas: [                              // os 3 números da capa
+    { numero: "205", texto: "vídeos gravados" },
+    { numero: "135", texto: "marcas atendidas" },
+    { numero: "5", texto: "dias úteis de entrega" }
+  ],
+  fotoCapa: "midia/capa.jpg",            // sua foto principal
+  fotoSobre: "midia/sobre.jpg",          // segunda foto, no dia a dia
+  sobreTexto: "Sou a Laís, tenho 32 anos, moro em Goiânia e sou mãe do Gustavo. Sou empresária e passei 14 anos trabalhando com vendas, então sei o que faz alguém decidir comprar. Minha rotina é real e corrida, e é nela que eu mostro os produtos: do jeito que a sua cliente usaria. Por isso marcas de beleza, bem-estar, maternidade e tecnologia combinam comigo.",
+  diferenciais: [                        // os 3 diferenciais da tabelinha
+    "Estudo a dor do cliente da marca antes de criar.",
+    "Roteiro meu, aprovado pela marca antes de gravar.",
+    "Edição pronta pra anúncio, com gancho forte e som tratado."
+  ],
+  destaques: [                           // seus 3 MELHORES vídeos. O primeiro é o mais forte (fica no centro e toca sozinho)
+    { titulo: "Creatina Alofit", nicho: "Fitness", formato: "Review", video: "midia/destaques/1.mp4", capa: "", res: "" },        // res: resultado real, ex.: "116 vendas"
+    { titulo: "Look de treino ao ar livre", nicho: "Moda fitness", formato: "Nativo", video: "midia/destaques/2.mp4", capa: "", res: "" },
+    { titulo: "Provador de looks", nicho: "Moda", formato: "Nativo", video: "midia/destaques/3.mp4", capa: "", res: "" }
+  ],
+  nichos: [                              // uma página por nicho. Mínimo 3 vídeos em cada; com menos, apague o nicho
+    { nome: "tech", videos: [
+      { titulo: "Méliuz", video: "midia/nichos/tech/meliuz.mp4", capa: "midia/nichos/tech/meliuz.jpg" },
+      { titulo: "Zapay", video: "midia/nichos/tech/zapay.mp4", capa: "midia/nichos/tech/zapay.jpg" },
+      { titulo: "JusIA", video: "midia/nichos/tech/jusia.mp4", capa: "midia/nichos/tech/jusia.jpg" } ] },
+    { nome: "maternidade", videos: [
+      { titulo: "Enxovaly", video: "midia/nichos/maternidade/enxovaly.mp4", capa: "midia/nichos/maternidade/enxovaly.jpg" },
+      { titulo: "Baobab", video: "midia/nichos/maternidade/baobab.mp4", capa: "midia/nichos/maternidade/baobab.jpg" },
+      { titulo: "Zaai", video: "midia/nichos/maternidade/zaai.mp4", capa: "midia/nichos/maternidade/zaai.jpg" } ] },
+    { nome: "suplementos", videos: [
+      { titulo: "Harmonya", video: "midia/nichos/suplementos/harmonya.mp4", capa: "midia/nichos/suplementos/harmonya.jpg" },
+      { titulo: "Bloomie", video: "midia/nichos/suplementos/bloomie.mp4", capa: "midia/nichos/suplementos/bloomie.jpg" },
+      { titulo: "Emunora", video: "midia/nichos/suplementos/emunora.mp4", capa: "midia/nichos/suplementos/emunora.jpg" } ] },
+    { nome: "fitness", videos: [
+      { titulo: "Alofit", video: "midia/nichos/fitness/alofit.mp4", capa: "midia/nichos/fitness/alofit.jpg" },
+      { titulo: "Feelgoomy", video: "midia/nichos/fitness/feelgoomy.mp4", capa: "midia/nichos/fitness/feelgoomy.jpg" },
+      { titulo: "Caffeine Army", video: "midia/nichos/fitness/caffeine.mp4", capa: "midia/nichos/fitness/caffeine.jpg" } ] },
+    { nome: "beleza", videos: [
+      { titulo: "Dermeclat", video: "midia/nichos/beleza/dermeclat.mp4", capa: "midia/nichos/beleza/dermeclat.jpg" },
+      { titulo: "The Ordinary", video: "midia/nichos/beleza/ordinary.mp4", capa: "midia/nichos/beleza/ordinary.jpg" },
+      { titulo: "Nuve", video: "midia/nichos/beleza/nuve.mp4", capa: "midia/nichos/beleza/nuve.jpg" } ] },
+    { nome: "skincare", videos: [] },
+    { nome: "maquiagem", videos: [] },
+    { nome: "cabelo", videos: [] },
+    { nome: "moda", videos: [] },
+    { nome: "casa e decoração", videos: [] },
+    { nome: "comida", videos: [] },
+    { nome: "pet", videos: [] },
+    { nome: "carros", videos: [] },
+    { nome: "finanças", videos: [] }
+  ],
+  elogios: [                             // depoimentos REAIS de marcas. Vazio = espaço com dica
+    { texto: "", marca: "", detalhe: "" }, // texto: a frase da marca · marca: nome · detalhe: contexto (ex.: "campanha de lançamento")
+    { texto: "", marca: "", detalhe: "" },
+    { texto: "", marca: "", detalhe: "" }
+  ],
+  marcas: [                              // marcas atendidas. logo: arquivo em midia/logos (ou "" pra mostrar só o nome)
+    { nome: "O Boticário", logo: "midia/logos/boticario.jpg" },
+    { nome: "Méliuz", logo: "midia/logos/meliuz.png" },
+    { nome: "iFood", logo: "midia/logos/ifood.png" },
+    { nome: "Época Cosméticos", logo: "" },
+    { nome: "Bloom", logo: "midia/logos/bloom.png" },
+    { nome: "Eudora", logo: "midia/logos/eudora.jpg" },
+    { nome: "Skelt", logo: "" },
+    { nome: "L'Oréal", logo: "midia/logos/loreal.jpg" },
+    { nome: "The Ordinary", logo: "midia/logos/the-ordinary.png" },
+    { nome: "Nestlé Moça", logo: "midia/logos/nestle-moca.jpg" },
+    { nome: "Rexona", logo: "midia/logos/rexona.png" },
+    { nome: "OMO", logo: "midia/logos/omo.jpg" },
+    { nome: "Zapay", logo: "midia/logos/zapay.png" },
+    { nome: "JusIA", logo: "midia/logos/jusia.png" },
+    { nome: "Enxovaly", logo: "midia/logos/enxovaly.png" },
+    { nome: "Dermeclat", logo: "midia/logos/dermeclat.png" },
+    { nome: "Caffeine Army", logo: "midia/logos/caffeine-army.jpg" },
+    { nome: "Saint Germain", logo: "midia/logos/saint-germain.jpg" },
+    { nome: "Simple Organic", logo: "midia/logos/simple-organic.png" },
+    { nome: "Creamy", logo: "midia/logos/creamy.jpg" },
+    { nome: "Lab8", logo: "midia/logos/lab8.jpg" },
+    { nome: "Liss Up", logo: "midia/logos/liss-up.jpg" },
+    { nome: "Ultra", logo: "midia/logos/ultra.jpg" },
+    { nome: "Braé", logo: "midia/logos/brae.jpg" },
+    { nome: "Aneethun", logo: "midia/logos/aneethun.jpg" },
+    { nome: "Cicatribem", logo: "midia/logos/cicatribem.png" },
+    { nome: "Maxfem", logo: "midia/logos/maxfem.png" },
+    { nome: "Goold", logo: "midia/logos/goold.jpg" },
+    { nome: "Sekey", logo: "midia/logos/sekey.jpg" },
+    { nome: "Adoro Mar", logo: "midia/logos/adoro-mar.jpg" },
+    { nome: "Bitarra", logo: "midia/logos/bitarra.jpg" },
+    { nome: "Versiani Swim", logo: "midia/logos/versiani-swim.jpg" },
+    { nome: "Dona Jura", logo: "midia/logos/dona-jura.jpg" },
+    { nome: "Maria Brasileira", logo: "midia/logos/maria-brasileira.png" },
+    { nome: "Qorvo", logo: "midia/logos/qorvo.png" },
+    { nome: "Alofit", logo: "" },
+    { nome: "Feelgoomy", logo: "" },
+    { nome: "Harmonya", logo: "" },
+    { nome: "Emunora", logo: "" },
+    { nome: "Baobab", logo: "" },
+    { nome: "Zaai", logo: "" },
+    { nome: "Nuve", logo: "" }
+  ],
+  duvidas: [                             // as 4 dúvidas do contato. resposta vazia = espaço pra preencher
+    { pergunta: "Onde posso usar o conteúdo?", resposta: "Redes sociais (Instagram, TikTok, Facebook e Pinterest), anúncios pagos (Meta Ads, TikTok Ads e Google Ads), YouTube e Shorts, site, loja virtual, landing pages e e-mail marketing." },
+    { pergunta: "Por quanto tempo?", resposta: "30 dias de uso em anúncios, com possibilidade de extensão." },
+    { pergunta: "Tem exclusividade?", resposta: "Só se for combinada previamente." },
+    { pergunta: "Qual o prazo?", resposta: "5 dias úteis de entrega." }
+  ]
+};
+montar(DADOS);
+</script>
+</body>
+</html>
